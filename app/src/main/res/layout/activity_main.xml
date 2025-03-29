@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/gradinet_background"
+    android:padding="10dp"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -15,6 +16,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
+        android:padding="10dp"
         tools:context=".MainActivity">
 
         <!-- Timer Section -->
@@ -27,7 +29,7 @@
             android:elevation="10dp"
             android:gravity="center">
 
-            <TextView
+            <com.example.hotspot_control.ShinyTextView
                 android:id="@+id/timerTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -44,14 +46,17 @@
                 android:gravity="center"
                 android:layout_marginTop="10dp">
 
-                <TextView
+                <EditText
                     android:id="@+id/hours"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/hour"
                     android:textSize="24sp"
                     android:fontFamily="@font/kubo"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#C6C6C6"
+                    android:inputType="number"
+                    android:hint="@string/hour" />
+
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -61,14 +66,16 @@
                     android:textSize="24sp"
                     android:textColor="@android:color/white"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/minutes"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/min"
                     android:textSize="24sp"
                     android:fontFamily="@font/kubo"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#C6C6C6"
+                    android:inputType="number"
+                    android:hint="@string/min"/>
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -78,14 +85,16 @@
                     android:textSize="24sp"
                     android:textColor="@android:color/white"/>
 
-                <TextView
+                <EditText
                     android:id="@+id/seconds"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/sec"
                     android:textSize="24sp"
                     android:fontFamily="@font/kubo"
-                    android:textColor="@android:color/white"/>
+                    android:textColor="@android:color/white"
+                    android:textColorHint="#C6C6C6"
+                    android:inputType="number"
+                    android:hint="@string/sec"/>
             </LinearLayout>
         </LinearLayout>
 
@@ -99,15 +108,15 @@
             android:layout_marginTop="20dp"
             android:padding="10dp">
 
-            <TextView
+            <com.example.hotspot_control.ShinyTextView
                 android:id="@+id/connectedTitle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="CONNECTED"
+                android:text="@string/connection"
                 android:textSize="16sp"
+                android:textStyle="bold"
                 android:fontFamily="@font/kubo"
-                android:textColor="@android:color/white"
-                android:padding="5dp"/>
+                android:textColor="@android:color/white"/>
 
             <View
                 android:layout_width="match_parent"
